@@ -15,7 +15,7 @@ https://projects.raspberrypi.org/en/projects/build-a-buggy
 Aunque hice algunos cambios en la estructura y decidí utilizar una pieza de madera como chasis.
 
 
-![Robot Car](screenshots/20190509_195732.jpg?raw=true "Primera Versión")
+![Robot Car](screenshots/20190525_150453.jpg?raw=true "Primera Versión")
 
 Al finalizar me dí cuenta que no me gustaba la manera como controlan el robot. Para ello utilizan una aplicación android llamada BlueDot y esta se conecta a un script en phyton. Esto obliga a conectarse remotamente vía VNC a la Raspberry para iniciar el programa y correrlo en la consola gráfica de phyton.
 
@@ -55,14 +55,14 @@ En la tercera versión de la App incluí un switch que me permite encender/apaga
 
 Del lado del servidor solo tenemos un archivo jar, el cual se ejecuta de una manera muy simple :
 
-´java -jar RemoteControlServer2.jar´
+java -jar RemoteControlServer2.jar
 
 Si se desea se puede automatizar en un shell o en el /etc/rc.local para que inicie al arrancar el sistema operativo.
 
 
 No llevo un control muy estricto de las versiones así que posiblemente no se encuentren todas en el repositorio. Por lo general trato de mantener solo la última versión.
 
-***
+Revisar el Wiki para más información
 
 Gracias
 
