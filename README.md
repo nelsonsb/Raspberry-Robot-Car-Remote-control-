@@ -15,7 +15,7 @@ https://projects.raspberrypi.org/en/projects/build-a-buggy
 Aunque hice algunos cambios en la estructura y decidí utilizar una pieza de madera como chasis.
 
 
-![Robot Car](screenshots/20190525_150453.jpg?raw=true "Primera Versión")
+![Robot Car](screenshots/20190525_150453.jpg?raw=true "Última Versión")
 
 Al finalizar me dí cuenta que no me gustaba la manera como controlan el robot. Para ello utilizan una aplicación android llamada BlueDot y esta se conecta a un script en phyton. Esto obliga a conectarse remotamente vía VNC a la Raspberry para iniciar el programa y correrlo en la consola gráfica de phyton.
 
