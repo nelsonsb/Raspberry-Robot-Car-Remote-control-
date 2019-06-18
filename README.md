@@ -27,42 +27,8 @@ La forma de conexión es muy sencilla, utilizando sockets, solo debes conectarte
 
 En el repositorio existen 2 carpetas : una para la parte del servidor (Java) y otra para la app (Android)
 
-## Primera Versión (Servidor)
 
-En la primera versión solo tenía 2 motores para la tracción trasera del carro, pero lamentablemente hacer los giros no funcionaba. Las ruedas del carro patinaban y no giraba muy bien.
-
-## Segunda versión (Servidor)
-
-Posteriormente adicioné 2 motores más al carro y ya tenía tracción en las 4 ruedas. Esto facilitaba notablemente los giros.  Básicamente los cambios se hicieron en el script del lado del servidor. Solo fué adicionar 4 nuevos puntos de conexión.
-
-## Tercera versión (Servidor)
-
-En la tercera versión solamente incorporé un pin más para controlar una luz led que adicioné al carro.
-
-## Primera versión (Android App)
-
-La aplicación en Android no es estéticamente muy bonita que digamos. Solo tiene un par de cuadros de texto para digitar la IP y el puerto a donde se va a conectar y unos botones con las funciones de : avanzar, retroceder, izquierda, derecha y parar.
-
-## Segunda versión (Android App)
-
-La siguiente versión de la App la modifiqué para que el carro se mueva solo si se tiene presionado algún botón. En el momento en que se suelta el botón correspondiente, se envía la señal de parar.
-
-## Tercera versión (Android App)
-
-En la tercera versión de la App incluí un switch que me permite encender/apagar una luz que incorporé en el carro.
-
-## Ejecución del lado del servidor (Raspberry)
-
-Del lado del servidor solo tenemos un archivo jar, el cual se ejecuta de una manera muy simple :
-
-java -jar RemoteControlServer2.jar
-
-Si se desea se puede automatizar en un shell o en el /etc/rc.local para que inicie al arrancar el sistema operativo.
-
-
-No llevo un control muy estricto de las versiones así que posiblemente no se encuentren todas en el repositorio. Por lo general trato de mantener solo la última versión.
-
-Revisar el Wiki para más información
+Revisar el [Wiki](https://github.com/nelsonsb/Raspberry-Robot-Car-Remote-control-/wiki) para más información
 
 Gracias
 
