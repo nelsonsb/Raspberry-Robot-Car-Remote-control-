@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Remote Control"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btForward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tvIp"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="161dp"
+                android:layout_height="40dp"
+                android:hint="ip"
+                android:singleLine="true"
+                android:text="192.168.4.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/fab_margin" />
+
+            <EditText
+                android:id="@+id/tvPort"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="73dp"
+                android:layout_height="40dp"
+                android:hint="9090"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="9090"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/fab_margin"
+                android:visibility="visible"
+                tools:text="9090" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:text="Forward"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingBottom="@dimen/fab_margin">
+
+            <Button
+                android:id="@+id/btLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="32dp"
+                android:enabled="false"
+                android:text="Left"
+                app:layout_constraintEnd_toStartOf="@+id/btStop"
+                tools:layout_editor_absoluteY="280dp" />
+
+            <Button
+                android:id="@+id/btStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:enabled="false"
+                android:onClick="stop"
+                android:text="Stop"
+                app:layout_constraintTop_toBottomOf="@+id/btForward"
+                tools:layout_editor_absoluteX="167dp" />
+
+            <Button
+                android:id="@+id/btRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="32dp"
+                android:enabled="false"
+                android:text="Right"
+                app:layout_constraintStart_toEndOf="@+id/btStop"
+                tools:layout_editor_absoluteY="280dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <Button
+                android:id="@+id/btBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Backward"
+                app:layout_constraintBottom_toTopOf="@+id/tvResponse"
+                app:layout_constraintTop_toBottomOf="@+id/btStop"
+                tools:layout_editor_absoluteX="155dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <Switch
+                android:id="@+id/swFrontLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Luz Frontal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResponse"
+            android:layout_width="327dp"
+            android:layout_height="39dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="108dp"
+            android:text="tvResponse"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
